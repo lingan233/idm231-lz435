@@ -1,13 +1,11 @@
 * {
-    color: white;
+    /* color: white; */
     font-size: 1.1rem;
 }
 
 body {
     background-color: #2F2F2F;
 }
-
-
 
 /* #wrapper {
     max-width: 960px;
@@ -17,6 +15,10 @@ body {
 /* .background {
     display: flex;
 } */
+
+[hidden] {
+	display: none !important;
+}
 
 .foreground {
     text-align: center;
@@ -65,7 +67,7 @@ body {
 }
 
 .cat-button:active {
-    transform: scale(1.1)
+    transform: scale(.8);
 }
 
 .cat-button:nth-child(1) {
@@ -88,13 +90,13 @@ body {
 
 .cat-button:nth-child(4) {
     position: absolute;
-    top: 67%;
+    top: 63%;
     left: 58%;
 }
 
 .cat-button:nth-child(5) {
     position: absolute;
-    top: 70%;
+    top: 66%;
     left: 8%;
 }
 
@@ -106,8 +108,8 @@ body {
 
 .cat-button:nth-child(7) {
     position: absolute;
-    top: 81%;
-    left: 42%;
+    top: 77%;
+    left: 40%;
 }
 
 .cat-button:nth-child(8) {
@@ -130,7 +132,7 @@ body {
 
 .cat-button:nth-child(11) {
     position: absolute;
-    top: 75%;
+    top: 73%;
     left: 77%;
 }
 
@@ -144,7 +146,57 @@ h1 {
     color: #F38453;
 }
 
-p {
+.foreground p {
     color: #F1F1F1;
+}
+
+/* -----------------MODAL----------------- */
+
+.modal {
+	height: 100vh;
+	width: 100vw;
+
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 99;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.modal .blanket {
+	background-color: rgba(0, 0, 0, .8);
+
+	height: 100vh;
+	width: 100vw;
+
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+}
+
+.modal-body {
+	background-color: #fff;
+	border: none;
+
+	height: 50vh;
+	max-width: 50vw;
+
+	position: relative;
+	z-index: 101;
+
+	padding: 3rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+	font-size: 2rem;
+	font-weight: 300;
+    text-align: center;
 }
 

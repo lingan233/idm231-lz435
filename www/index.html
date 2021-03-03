@@ -15,13 +15,17 @@
             <div>
                 <h1>Cat Zodiac</h1>
                 <p>Enter birthday to see your cat zodiac...</p>
-                <button class="button">Submit</button>
+                <div id="userinfo">
+                    <p><input id="fName" type="text" placeholder="First Name"></p>
+                    <p><input id="bDay" type="date"></p>
+                    <p><button id="userSubmit" class="button">Submit</button></p>
+                </div>
             </div>
         </div>
 
-        <div id="background">
+        <div class="background">
             <button id="cat1" class="cat-button">
-                <img src="images/cat1button.jpg" alt="Ragdoll">
+                <img src="images/cat1button.jpg" alt="Ragdoll Cat">
             </button>
 
             <button id="cat2" class="cat-button">
@@ -29,7 +33,7 @@
             </button>
 
             <button id="cat3" class="cat-button">
-                <img src="images/cat3button.jpg" alt="Munchkin">
+                <img src="images/cat3button.jpg" alt="Munchkin Cat">
             </button>
 
             <button id="cat4" class="cat-button">
@@ -69,7 +73,22 @@
             </button>
         </div>
 
-        <div id="bot"></div>
+        <div class="modal-section">
+            <div id="modal" class="modal" hidden>
+                <div class="modal-body">
+                    <div class="modal-content">
+                        <h1 id="zTitle">Title</h1>
+                        <p id="zDateRange">Date Range</p>
+                        <p>
+                            <span hidden id="userName">User Name</span>
+                            <span id="zMoreInfo">object description goes here</span>
+                        </p>
+                        <button id="modal-close">Close</button>
+                    </div>
+                </div>
+                <div class="blanket"></div>
+            </div>
+        </div>
     </div>
 
     <script src="main.js"></script>
