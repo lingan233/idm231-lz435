@@ -9,7 +9,21 @@
     <link rel="stylesheet" href="main.css">
 </head>
 
-<body>
+<body class="blackScreen">
+    <!-- Preload sound files -->
+    <audio id="meow1" src="sounds/cat_meow_1.wav" preload="auto"></audio>
+    <audio id="meow2" src="sounds/cat_meow_2.wav" preload="auto"></audio>
+    <audio id="meow3" src="sounds/cat_meow_3.wav" preload="auto"></audio>
+    <audio id="meow4" src="sounds/cat_meow_4.wav" preload="auto"></audio>
+    <audio id="meow5" src="sounds/cat_meow_5.wav" preload="auto"></audio>
+    <audio id="meow6" src="sounds/cat_meow_6.wav" preload="auto"></audio>
+    <audio id="meow7" src="sounds/cat_meow_7.wav" preload="auto"></audio>
+    <audio id="meow8" src="sounds/cat_meow_8.wav" preload="auto"></audio>
+    <audio id="meow9" src="sounds/cat_meow_9.wav" preload="auto"></audio>
+    <audio id="meow10" src="sounds/cat_meow_10.wav" preload="auto"></audio>
+    <audio id="meow11" src="sounds/cat_meow_11.wav" preload="auto"></audio>
+    <audio id="meow12" src="sounds/cat_meow_12.wav" preload="auto"></audio>
+
     <div id="wrapper">
         <div class="foreground">
             <div>
@@ -69,7 +83,7 @@
             </button>
 
             <button id="cat12" class="cat-button">
-                <img src="images/cat12button.jpg" alt="Egyptian Cat">
+                <img src="images/cat12button.jpg" alt="Egyptian Mau">
             </button>
         </div>
 
@@ -77,6 +91,9 @@
             <div id="modal" class="modal" hidden>
                 <div class="modal-body">
                     <div class="modal-content">
+                        <div>
+                            <img id="zDisplayImg" src="" alt="">
+                        </div>
                         <h1 id="zTitle">Title</h1>
                         <p id="zDateRange">Date Range</p>
                         <p>
