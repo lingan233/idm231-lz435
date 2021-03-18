@@ -25,18 +25,7 @@
     <audio id="meow12" src="sounds/cat_meow_12.wav" preload="auto"></audio>
 
     <div id="wrapper">
-        <div class="foreground">
-            <div>
-                <h1>Cat Zodiac</h1>
-                <p>Enter birthday to see your cat zodiac...</p>
-                <div id="userinfo">
-                    <p><input id="fName" type="text" placeholder="First Name"></p>
-                    <p><input id="bDay" type="date"></p>
-                    <p><button id="userSubmit" class="button">Submit</button></p>
-                </div>
-            </div>
-        </div>
-
+        <div class="background-blanket"></div>
         <div class="background">
             <button id="cat1" class="cat-button">
                 <img src="images/cat1button.jpg" alt="Ragdoll Cat">
@@ -85,6 +74,22 @@
             <button id="cat12" class="cat-button">
                 <img src="images/cat12button.jpg" alt="Egyptian Mau">
             </button>
+
+            <div>
+                <img src="images/help.png" alt="Help" id="help">
+            </div>
+        </div>
+
+        <div class="foreground">
+            <div>
+                <h1>Cat Zodiac</h1>
+                <p>Enter birthday to see your cat zodiac...</p>
+                <div id="userinfo">
+                    <p><input id="fName" type="text" placeholder="First Name"></p>
+                    <p><input id="bDay" type="date"></p>
+                    <p><button id="userSubmit" class="button">Submit</button></p>
+                </div>
+            </div>
         </div>
 
         <div class="modal-section">
@@ -92,15 +97,30 @@
                 <div class="modal-body">
                     <div class="modal-content">
                         <div>
-                            <img id="zDisplayImg" src="" alt="">
+                            <img id="zDisplayImg" src="images/cat6.jpg" alt="placeholder">
                         </div>
                         <h1 id="zTitle">Title</h1>
                         <p id="zDateRange">Date Range</p>
-                        <p>
+                        <p class="content-text">
                             <span hidden id="userName">User Name</span>
                             <span id="zMoreInfo">object description goes here</span>
                         </p>
-                        <button id="modal-close">Close</button>
+                        <p><button id="modal-close" class="button">Close</button></p>
+                    </div>
+                </div>
+                <div class="blanket"></div>
+            </div>
+        </div>
+
+        <div class="modal-section">
+            <div id="help-modal" class="help-modal" hidden>
+                <div class="modal-body" id="help-modal-body">
+                    <div class="modal-content">
+                        <ul>
+                            <li>Enter name and birthday to know your cat zodiac</li>
+                            <li>Select each cat breed to see their description</li>
+                        </ul>
+                        <p><button id="help-modal-close" class="button">Close</button></p>
                     </div>
                 </div>
                 <div class="blanket"></div>

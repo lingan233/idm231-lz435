@@ -10,6 +10,7 @@ const cat9obj = document.getElementById('cat9');
 const cat10obj = document.getElementById('cat10');
 const cat11obj = document.getElementById('cat11');
 const cat12obj = document.getElementById('cat12');
+const helpObj = document.getElementById('help');
 
 // Link modal element/objects to JS
 const zDisplayObj = document.getElementById('zDisplayImg');
@@ -40,6 +41,7 @@ const meow12Obj = document.getElementById('meow12');
 // var selected_sign;  // Currently selected sign
 
 const modal = document.getElementById('modal');
+const helpModal = document.getElementById('help-modal');
 
 const closeModalObj = document.getElementById('modal-close');
 closeModalObj.addEventListener('click', function () {
@@ -47,68 +49,84 @@ closeModalObj.addEventListener('click', function () {
     // return userSubmitObj to default
 });
 
+const helpCloseModalObj = document.getElementById('help-modal-close');
+helpCloseModalObj.addEventListener('click', function () {
+    helpModal.hidden = !helpModal.hidden;
+    // return userSubmitObj to default
+});
+
+helpObj.addEventListener('click', function () {
+    console.log('help clicked on');
+    userNeed('help');
+});
+
 cat1obj.addEventListener('click', function () {
-    console.log('Cat1 clicked on')
+    console.log('Cat1 clicked on');
     userPicked('cat1');
 });
 
 cat2obj.addEventListener('click', function () {
-    console.log('Cat2 clicked on')
+    console.log('Cat2 clicked on');
     userPicked('cat2');
 });
 
 cat3obj.addEventListener('click', function () {
-    console.log('Cat3 clicked on')
+    console.log('Cat3 clicked on');
     userPicked('cat3');
 });
 
 cat4obj.addEventListener('click', function () {
-    console.log('Cat4 clicked on')
+    console.log('Cat4 clicked on');
     userPicked('cat4');
 });
 
 cat5obj.addEventListener('click', function () {
-    console.log('Cat5 clicked on')
+    console.log('Cat5 clicked on');
     userPicked('cat5');
 });
 
 cat6obj.addEventListener('click', function () {
-    console.log('Cat6 clicked on')
+    console.log('Cat6 clicked on');
     userPicked('cat6');
 });
 
 cat7obj.addEventListener('click', function () {
-    console.log('Cat7 clicked on')
+    console.log('Cat7 clicked on');
     userPicked('cat7');
 });
 
 cat8obj.addEventListener('click', function () {
-    console.log('Cat8 clicked on')
+    console.log('Cat8 clicked on');
     userPicked('cat8');
 });
 
 cat9obj.addEventListener('click', function () {
-    console.log('Cat9 clicked on')
+    console.log('Cat9 clicked on');
     userPicked('cat9');
 });
 
 cat10obj.addEventListener('click', function () {
-    console.log('Cat10 clicked on')
+    console.log('Cat10 clicked on');
     userPicked('cat10');
 });
 
 cat11obj.addEventListener('click', function () {
-    console.log('Cat11 clicked on')
+    console.log('Cat11 clicked on');
     userPicked('cat11');
 });
 
 cat12obj.addEventListener('click', function () {
-    console.log('Cat12 clicked on')
+    console.log('Cat12 clicked on');
     userPicked('cat12');
 });
 
+function userNeed(whichOne) {
+    helpModal.hidden = !helpModal.hidden;
+}
+
 function userPicked(whichOne) {
     console.log('User Picked Called ' + whichOne);
+    //if whichOne is entered, show modal
     modal.hidden = !modal.hidden;
     //Display large img
     //Display Date Range
@@ -271,7 +289,7 @@ userSubmitObj.addEventListener('click', function () {
     const userFirstName = document.getElementById('fName').value;
     console.log('userFirstName is: ' + userFirstName);
     userName.hidden = !userName.hidden;
-    userNameObj.innerHTML = 'Hi ' + userFirstName + ', ';
+    userNameObj.innerHTML = 'Hi ' + userFirstName + '! ';
 
     // Get the user date and extract the month of year and day of month
     const userBday = new Date(document.getElementById('bDay').value);
@@ -315,7 +333,10 @@ userSubmitObj.addEventListener('click', function () {
 
     console.log('AstroSign is: ' + AstroSign);
 
-    userPicked(AstroSign);
+    if (isNaN(whichMonth) == false) {
+        userPicked(AstroSign);
+    }
+    
     // Display custom image based on zodiac sign
 
 }); 
